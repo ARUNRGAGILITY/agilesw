@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %}Edit Todolist Item{% endblock title %} 
+{% block content %}
+{% include 'navbar.html' %}
+<h1>Edit Todolist Item</h1>
+<form action="" method='POST' class='form'>
+{% csrf_token %}
+{{form.as_p}}
+<input type='submit' value='Confirm'/>
+</form>
+{% endblock content %}
